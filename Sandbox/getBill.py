@@ -18,3 +18,4 @@ response = requests.get(requesturl)
 
 print json.dumps(response.json)
 
+# print response.headers['content-type']
