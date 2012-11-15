@@ -1,5 +1,9 @@
 #!/usr/bin/python
 
+#
+# http://openlegislation.readthedocs.org/en/latest/#meeting
+#
+
 import requests
 import json
 import sys
@@ -18,4 +22,3 @@ response = requests.get(requesturl)
 
 print json.dumps(response.json)
 
-# print response.headers['content-type']

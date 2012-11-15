@@ -1,12 +1,12 @@
 #!/usr/bin/python
 
-import requests
-import json
-import sys
-
 #
 # http://openlegislation.readthedocs.org/en/latest/#meeting
 #
+
+import requests
+import json
+import sys
 
 if len(sys.argv) < 2:
   sys.exit('Missing Argument. The arguments should be Floor Date: such as: floor 06-24-2011')
