@@ -16,5 +16,5 @@ requesturl=host+billId+'.'+answerformat
 
 response = requests.get(requesturl)
 
-print response.json
+print json.dumps(response.json)
 
