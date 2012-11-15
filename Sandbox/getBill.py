@@ -2,15 +2,19 @@
 
 import requests
 import json
+import sys
+
+if len(sys.argv) < 2:
+  sys.exit('Missing Argument. The argument should be a Bill Id such as: S1234-2011')
+
+billId=sys.argv[1]
 
 answerformat='json'
-billId='S1234-2011'
 host='http://open.nysenate.gov/legislation/2.0/bill/'
 
 requesturl=host+billId+'.'+answerformat
 
-print requesturl
-
 response = requests.get(requesturl)
 
 print response.json
+
