@@ -3,11 +3,14 @@
 import requests
 import json
 
+answerformat='json'
 billId='S1234-2011'
-host='http://open.nysenate.gov/legislation/bill/'
+host='http://open.nysenate.gov/legislation/2.0/bill/'
 
-url=host+billId
+requesturl=host+billId+'.'+answerformat
 
-response = requests.get(url)
+print requesturl
 
-print response.text
+response = requests.get(requesturl)
+
+print response.json
